@@ -2,26 +2,28 @@ source:
 
 ---
 
-# heading							- title
-## subheading
+# heading							<- title
+## subheading						<- optional subtitle
 
 ---
 
-"some sort of quote"				- quote
-- Human Person [optional link]
+"some sort of quote"				<- quote
+- Human Person [optional link]		<- author
 
 ---
 
-This is a *bold* state of affairs	- statement
+This is a *bold* state of affairs	<- statement
 
 ---
 
-- apples
-- oranges 							- list
+# my list							<- optional heading
+- apples							<- list
+- oranges 							
 - pears
 
 ---
 
-img[url/base64]						- image
+img[url/base64]					<- image
+#33aaff 						<- optional background color
 
 ---
