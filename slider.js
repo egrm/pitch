@@ -26,7 +26,8 @@ const createSlider = () => {
 
 slider = createSlider();
 
-onkeydown = (e) => {
+// interface
+onkeydown = (e) => { 
 	if (e.key === 'ArrowRight') {
 		slider.next();
 	}
