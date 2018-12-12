@@ -1,0 +1,27 @@
+source:
+
+---
+
+# heading							- title
+## subheading
+
+---
+
+"some sort of quote"				- quote
+- Human Person [optional link]
+
+---
+
+This is a *bold* state of affairs	- statement
+
+---
+
+- apples
+- oranges 							- list
+- pears
+
+---
+
+img[url/base64]						- image
+
+---
