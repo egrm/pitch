@@ -1,41 +1,41 @@
 const log = console.log;
 
-const slides = [...document.querySelectorAll('.slide')];
+const createSlider = () => {
+	const slides = [...document.querySelectorAll('.slide')];
+	let currentSlide = 0;
 
-let currentSlide = 0;
+	const goTo = (slideIndex) => {
+		if (slides[slideIndex]) {
+			currentSlide = slideIndex;
+			slides[slideIndex].scrollIntoView();
+		}
+	}
 
-const moveToSlide = (slideIndex) => {
-	if (slides[slideIndex]) {
-		slides[slideIndex].scrollIntoView();
+	return {
+		next() {
+			goTo(currentSlide + 1)
+		},
+		previous() {
+			goTo(currentSlide - 1)
+		},
+		to(i) {
+			goTo(i);
+		}
 	}
 }
 
-const moveToNextSlide = () => {
-	if ((slides.length - 1) > currentSlide) {
-		log('right')
-		currentSlide += 1;
-	}
-	moveToSlide(currentSlide)
-}
-
-const moveToPreviousSlide = () => {
-	if (0 < currentSlide) {
-		log('left')
-		currentSlide -= 1;
-	}
-	moveToSlide(currentSlide)
-}
+slider = createSlider();
 
 onkeydown = (e) => {
 	if (e.key === 'ArrowRight') {
-		moveToNextSlide()
+		slider.next();
 	}
 
 	if (e.key === 'ArrowLeft') {
-		moveToPreviousSlide();
+		slider.previous();
 	}
 
 	if (e.key.match(/[0-9]/)) {
-		moveToSlide(e.key)
+		slider.to(e.key)
 	}
 }
