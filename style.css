@@ -5,6 +5,9 @@
 
 body {
 	font: 32px/1.5 'lora';
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
 }
 
 .slide {
