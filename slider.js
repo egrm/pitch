@@ -42,8 +42,8 @@ onkeydown = (e) => {
 		slider.previous();
 	}
 
-	if (e.key.match(/[0-9]/)) {
-		slider.to(e.key)
+	if ((/[0-9]/).test(e.key)) {
+		slider.to(e.key - 1)
 	}
 }
 
