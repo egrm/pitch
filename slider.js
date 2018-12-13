@@ -1,4 +1,19 @@
-const log = console.log;
+const render = (html) => {
+	const display = document.getElementById('display');
+	display.innerHTML = html;
+}
+
+const presentation = `
+# this is a test
+---
+## and it works
+---
+it absolutely does
+for sure
+without a doubt either
+`
+
+render(compile(presentation))
 
 const createSlider = () => {
 	const slides = [...document.querySelectorAll('.slide')];
@@ -30,7 +45,8 @@ const createSlider = () => {
 	}
 }
 
-slider = createSlider();
+
+const slider = createSlider(presentation);
 
 // interface
 onkeydown = (e) => { 

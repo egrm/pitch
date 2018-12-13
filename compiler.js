@@ -1,3 +1,4 @@
+const log = console.log;
 
 const tokenize = (input) => {
 	const dictionary = [
@@ -81,18 +82,3 @@ const compile = (input) => {
 		}</div>`
 	}, '')
 }
-
-
-const render = (html) => {
-	const display = document.getElementById('display');
-	display.innerHTML = html;
-}
-
-const input = `
-# some kind of heading
-## some sort of subheading
----
-*hello world* in bold
----
-*hello world* in bold
-`
