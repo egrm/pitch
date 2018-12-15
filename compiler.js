@@ -15,6 +15,10 @@ const tokenize = (input) => {
 		re: 	/^\#(.*)/
 	},
 	{
+		type: 	'image',
+		re: 	/^img\[(.*)\]$/
+	},
+	{
 		type: 	'text',
 		re: 	/^\n*(.+)\n*/
 	},
@@ -71,6 +75,10 @@ const compile = (input) => {
 			}
 			case "subheading": {
 				result = `<h2>${token.content}</h2>`
+				break;
+			}
+			case "image": {
+				result = `<img src="${token.content}">`
 				break;
 			}
 		}

@@ -15,18 +15,14 @@ body {
 	height: 100vh;
 	width: 100vw;
 	box-sizing: border-box;
-	padding: 15vh;
+	padding: 10vh;
 }
 
 .slide img {
 	display: block;
 }
 
-.slide-image {
-	padding: 10vh;
-}
-
-.slide-image img {
+.slide img {
 	height: 100%;
 	margin: auto;
 	resize: both;

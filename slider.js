@@ -11,6 +11,8 @@ const presentation = `
 it absolutely does
 for sure
 without a doubt either
+---
+img[./img/big-pic.jpg]
 `
 
 render(compile(presentation))
