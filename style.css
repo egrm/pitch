@@ -8,8 +8,6 @@
 	left: 2rem;
 	bottom: 2rem;
 	padding: 2rem;
-	border: 1px solid black;
-	background: #fff;
 }
 
 input, button, select, option {
@@ -28,7 +26,6 @@ body {
 }
 
 .slide {
-	/*border: 10vh solid black;*/
 	height: 100vh;
 	width: 100vw;
 	box-sizing: border-box;

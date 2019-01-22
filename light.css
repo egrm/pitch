@@ -1,0 +1,16 @@
+body {
+	color: black;
+	background: white;
+}
+#controls {
+	background: white;
+	border: 1px solid black;
+}
+
+input, button, select, option {
+	font-family: inherit;
+}
+
+textarea {
+	background: white;
+}
