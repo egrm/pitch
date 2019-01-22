@@ -3,20 +3,6 @@ const render = (html) => {
 	display.innerHTML = html;
 }
 
-const presentation = `
-# this is a test
----
-## and it works
----
-it absolutely does
-for sure
-without a doubt either
----
-img[./img/big-pic.jpg]
-`
-
-render(compile(presentation))
-
 const createSlider = () => {
 	let slides = [...document.querySelectorAll('.slide')];
 	let currentSlide = 0;
@@ -32,8 +18,8 @@ const createSlider = () => {
 	goTo(0);
 
 	return {
-		load(presentation) {
-			render(compile(presentation))
+		load(file) {
+			render(compile(file))
 			slides = [...document.querySelectorAll('.slide')];
 		},
 		next() {
@@ -51,8 +37,7 @@ const createSlider = () => {
 	}
 }
 
-
-const slider = createSlider(presentation);
+const slider = createSlider();
 
 // interface
 window.onkeydown = (e) => { 

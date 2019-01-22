@@ -25,3 +25,15 @@ controls.onmouseover = (e) => {
 controls.onmouseleave = (e) => {
 	controls.classList.add('hidden')
 }
+
+const fileInput = document.getElementById('presentation_file')
+fileInput.onchange = (e) => {
+	const file = e.target.files[0];
+	const reader = new FileReader();
+	reader.readAsText(file, 'UTF-8')
+	reader.onload = (e) => {
+		const result = e.target.result;
+		slider.load(result)
+		manualInput.value = result;
+	}
+}
