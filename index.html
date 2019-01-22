@@ -6,6 +6,18 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<div id="controls">
+		<p>theme:</p>
+		<select name="theme" id="theme">
+		<option value="light">Light</option>
+		<option value="dark">Dark</option>
+		</select>
+		<br>
+		<p>upload:</p>
+		<input type="file" name="presentation" id="presentation">
+		<p>input manually:</p>
+		<textarea name="presentation_text" id="presentation_text" cols="30" rows="10"></textarea>
+	</div>
 	<div id="display"></div>
 	<script src="compiler.js"></script>
 	<script src="slider.js"></script>

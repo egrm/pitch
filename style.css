@@ -3,6 +3,23 @@
 	padding: 0;
 }
 
+#controls {
+	position: fixed;
+	left: 2rem;
+	bottom: 2rem;
+	padding: 2rem;
+	border: 1px solid black;
+	background: #fff;
+}
+
+input, button, select, option {
+	font-family: inherit;
+}
+
+textarea {
+	font: 16px monospace;
+}
+
 body {
 	font: 32px/1.5 'lora';
 	height: 100vh;
