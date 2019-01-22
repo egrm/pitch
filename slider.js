@@ -18,7 +18,7 @@ img[./img/big-pic.jpg]
 render(compile(presentation))
 
 const createSlider = () => {
-	const slides = [...document.querySelectorAll('.slide')];
+	let slides = [...document.querySelectorAll('.slide')];
 	let currentSlide = 0;
 
 	const goTo = (slideIndex) => {
@@ -32,6 +32,10 @@ const createSlider = () => {
 	goTo(0);
 
 	return {
+		load(presentation) {
+			render(compile(presentation))
+			slides = [...document.querySelectorAll('.slide')];
+		},
 		next() {
 			goTo(currentSlide + 1)
 		},
@@ -51,7 +55,7 @@ const createSlider = () => {
 const slider = createSlider(presentation);
 
 // interface
-onkeydown = (e) => { 
+window.onkeydown = (e) => { 
 	if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
 		slider.next();
 	}
@@ -66,6 +70,6 @@ onkeydown = (e) => {
 }
 
 // fix resizing issues
-onresize = (e) => {
+window.onresize = (e) => {
 	slider.to(slider.current())
 }
