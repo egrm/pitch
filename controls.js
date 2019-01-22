@@ -15,3 +15,13 @@ manualInput.oninput = (e) => {
 themeSelector.onchange = (e) => {
 	switchTheme(e.target.value);
 }
+
+const controls = document.getElementById('controls');
+
+controls.onmouseover = (e) => {
+	controls.classList.remove('hidden')
+}
+
+controls.onmouseleave = (e) => {
+	controls.classList.add('hidden')
+}

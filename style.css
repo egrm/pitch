@@ -8,6 +8,12 @@
 	left: 2rem;
 	bottom: 2rem;
 	padding: 2rem;
+	opacity: 1;
+	transition: opacity .6s;
+}
+
+#controls.hidden {
+	opacity: 0;
 }
 
 input, button, select, option {
