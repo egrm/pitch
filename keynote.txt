@@ -3,7 +3,5 @@
 ## and it works
 ---
 it absolutely does
-for sure
-without a doubt either
 ---
 img[./img/big-pic.jpg]
